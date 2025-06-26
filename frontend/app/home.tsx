@@ -6,9 +6,7 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to DocSync!</Text>
-      <Text style={styles.subtitle}>Manage your documents easily</Text>
-      
+      <Text style={styles.title}>Welcome to DocSync!</Text>  
       <TouchableHighlight 
         style={styles.button}
         onPress={() => router.push('/documents')}

@@ -15,7 +15,7 @@ export default function DocumentsScreen() {
       
       <ScrollView style={styles.content}>
 
-        <TouchableHighlight style={styles.documentCard}>
+        <TouchableWithoutFeedback style={styles.documentCard}>
           <View style={styles.documentContent}>
             <Text style={styles.icon}>📄</Text>
             <View style={styles.info}>
@@ -23,9 +23,9 @@ export default function DocumentsScreen() {
               <Text style={styles.fileDetails}>2.5 MB • Jun 25, 2025</Text>
             </View>
           </View>
-        </TouchableHighlight>
+        </TouchableWithoutFeedback>
 
-        <TouchableHighlight style={styles.documentCard}>
+        <TouchableWithoutFeedback style={styles.documentCard}>
           <View style={styles.documentContent}>
             <Text style={styles.icon}>📄</Text>
             <View style={styles.info}>
@@ -33,9 +33,9 @@ export default function DocumentsScreen() {
               <Text style={styles.fileDetails}>1.2 MB • Jun 24, 2025</Text>
             </View>
           </View>
-        </TouchableHighlight>
+        </TouchableWithoutFeedback>
 
-        <TouchableHighlight style={styles.documentCard}>
+        <TouchableWithoutFeedback style={styles.documentCard}>
           <View style={styles.documentContent}>
             <Text style={styles.icon}>📊</Text>
             <View style={styles.info}>
@@ -43,9 +43,9 @@ export default function DocumentsScreen() {
               <Text style={styles.fileDetails}>800 KB • Jun 23, 2025</Text>
             </View>
           </View>
-        </TouchableHighlight>
+        </TouchableWithoutFeedback>
 
-        <TouchableHighlight style={styles.documentCard}>
+        <TouchableWithoutFeedback style={styles.documentCard}>
           <View style={styles.documentContent}>
             <Text style={styles.icon}>📋</Text>
             <View style={styles.info}>
@@ -53,7 +53,7 @@ export default function DocumentsScreen() {
               <Text style={styles.fileDetails}>5.1 MB • Jun 22, 2025</Text>
             </View>
           </View>
-        </TouchableHighlight>
+        </TouchableWithoutFeedback>
 
       </ScrollView>
       

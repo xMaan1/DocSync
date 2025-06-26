@@ -5,10 +5,10 @@ import {useRouter} from 'expo-router';
 export default function SplashScreen() {
     const router = useRouter();
     const timer = setTimeout(() => {
-        router.replace('/home');
-    }, 3000); // Navigate to home after 3 seconds
+        router.replace('/login');
+    }, 3000); 
     useEffect(() => {
-        return () => clearTimeout(timer); // Cleanup timer on unmount
+        return () => clearTimeout(timer); 
     }, []);
   return (
     <View style={styles.container}>
