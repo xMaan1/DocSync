@@ -1,20 +1,20 @@
-import { Text, View, TouchableHighlight, StyleSheet } from "react-native";
-import { useRouter } from 'expo-router';
+import {Text, View, StyleSheet, ActivityIndicator} from "react-native";
+import {useEffect, useState} from "react";
+import {useRouter} from 'expo-router';
 
-export default function Index() {
-  const router = useRouter();
-
+export default function SplashScreen() {
+    const router = useRouter();
+    const timer = setTimeout(() => {
+        router.replace('/home');
+    }, 3000); // Navigate to home after 3 seconds
+    useEffect(() => {
+        return () => clearTimeout(timer); // Cleanup timer on unmount
+    }, []);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to DocSync!</Text>
-      <Text style={styles.subtitle}>Manage your documents easily</Text>
-      
-      <TouchableHighlight 
-        style={styles.button}
-        onPress={() => router.push('/documents')}
-      >
-        <Text style={styles.buttonText}>View My Documents</Text>
-      </TouchableHighlight>
+      <Text style={styles.title}>DocSync</Text>
+      <Text>Healthcare Management</Text>
+        <ActivityIndicator size="large" color="#007AFF" />
     </View>
   );
 }
@@ -28,25 +28,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 10,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#666',
-    marginBottom: 40,
-  },
-  button: {
-    backgroundColor: '#007AFF',
-    paddingHorizontal: 30,
-    paddingVertical: 15,
-    borderRadius: 8,
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
   },
 });
