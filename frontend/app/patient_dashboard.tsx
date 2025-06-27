@@ -5,7 +5,7 @@ export default function PatientDashboard() {
   const router = useRouter();
 
  return (
-  <ScrollView style={styles.mainContainer}>
+  <View style={styles.container}>
     <View style={styles.section1}>
       <View style={styles.textContainer}>
         <Text style={styles.headerTitle}>Good Morning</Text>
@@ -16,58 +16,64 @@ export default function PatientDashboard() {
       </View>
     </View>
     
-    <View style={styles.cardRow}>
-      <View style={styles.card}>
-        <Text style={styles.cardNumber1}>12</Text>
-        <Text style={styles.cardTitle}>Today's Appointments</Text>
+    <ScrollView style={styles.scrollContainer}>
+      <View style={styles.cardRow}>
+        <View style={styles.card}>
+          <Text style={styles.cardNumber1}>12</Text>
+          <Text style={styles.cardTitle}>Today's Appointments</Text>
+        </View>
+        
+        <View style={styles.card}>
+          <Text style={styles.cardNumber2}>48</Text>
+          <Text style={styles.cardTitle}>Total Patients</Text>
+        </View>
       </View>
       
-      <View style={styles.card}>
-        <Text style={styles.cardNumber2}>48</Text>
-        <Text style={styles.cardTitle}>Total Patients</Text>
+      <Text style={styles.section2}>Today's Appointments</Text>
+      <View style={styles.cardColumn}>
+        <View style={styles.card2}>
+          <Text style={styles.cardNumber1}>Abdulrehman Bilal</Text>
+          <Text style={styles.cardTitle}>Regular Checkup</Text>
+        </View>
+        <View style={styles.card2}>
+          <Text style={styles.cardNumber2}>Hassan Shahzad</Text>
+          <Text style={styles.cardTitle}>Follow-up</Text>
+        </View>
       </View>
-    </View>
-    
-    <Text style={styles.section2}>Today's Appointments</Text>
-    <View style={styles.cardColumn}>
-      <View style={styles.card2}>
-        <Text style={styles.cardNumber1}>Abdulrehman Bilal</Text>
-        <Text style={styles.cardTitle}>Regular Checkup</Text>
+      
+      <Text style={styles.section2}>Recent Patients</Text>
+      <View style={styles.cardColumn}>
+        <View style={styles.card2}>
+          <Text style={styles.cardNumber1}>Ali Khan</Text>
+          <Text style={styles.cardTitle}>Consultation</Text>
+        </View>
+        <View style={styles.card2}>
+          <Text style={styles.cardNumber2}>Hadi Bharara</Text>
+          <Text style={styles.cardTitle}>Follow-up</Text>
+        </View>
       </View>
-      <View style={styles.card2}>
-        <Text style={styles.cardNumber2}>Hassan Shahzad</Text>
-        <Text style={styles.cardTitle}>Follow-up</Text>
-      </View>
-    </View>
-    
-    <Text style={styles.section2}>Recent Patients</Text>
-    <View style={styles.cardColumn}>
-      <View style={styles.card2}>
-        <Text style={styles.cardNumber1}>Ali Khan</Text>
-        <Text style={styles.cardTitle}>Consultation</Text>
-      </View>
-      <View style={styles.card2}>
-        <Text style={styles.cardNumber2}>Hadi Bharara</Text>
-        <Text style={styles.cardTitle}>Follow-up</Text>
-      </View>
-    </View>
-  </ScrollView>
-);
+    </ScrollView>
+  </View>
+ );
 }
 
 const styles = StyleSheet.create({
-  mainContainer: {
+  container: {
     flex: 1,
     backgroundColor: '#f8f9fa',
   },
   section1: {
-    height: 120,
+    height: 135,
     padding: 20,
     backgroundColor: '#FACC15',
     flexDirection: 'row',
-    marginTop: 50,
+    paddingTop: 50,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
+  },
+  scrollContainer: {
+    flex: 1,
+    backgroundColor: '#f8f9fa',
   },
   textContainer: {
     flex: 1,
@@ -110,28 +116,28 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#4F46E5',
   },
-    cardNumber2: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        color: 'green',
-    },
+  cardNumber2: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'green',
+  },
   cardTitle: {
     fontSize: 14,
     color: '#666',
     marginTop: 5,
   },
-    section2: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#333',
-        marginLeft: 20,
-        marginTop: 20,
-    },
-    cardColumn: {
-        flexDirection: 'column',
-        marginLeft: 20,
-    },
-    card2: {
+  section2: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+    marginLeft: 20,
+    marginTop: 20,
+  },
+  cardColumn: {
+    flexDirection: 'column',
+    marginLeft: 20,
+  },
+  card2: {
     backgroundColor: 'white',
     padding: 20,
     borderRadius: 10,
