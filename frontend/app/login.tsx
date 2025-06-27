@@ -17,16 +17,19 @@ export default function LoginScreen() {
       />
       <TouchableHighlight 
         style={styles.loginButton}
-        onPress={() => router.push('/home')}
+        onPress={() => router.replace('/home')}
       >
         <Text style={styles.loginText}>Login</Text>
       </TouchableHighlight>
     <View style={styles.signupContainer}>
         <Text>Don't have an account? </Text>
-        <TouchableWithoutFeedback onPress={() => router.push('/register')}>
+    <TouchableWithoutFeedback onPress={() => router.push('/register')}>
+      <View>
         <Text style={styles.signupText}>Register Now!</Text>
+      </View>
     </TouchableWithoutFeedback>
-</View>    </View>
+  </View>
+    </View>
   );
 }
 const styles = StyleSheet.create({

@@ -1,5 +1,5 @@
 import {Text, View, StyleSheet, ActivityIndicator} from "react-native";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {useRouter} from 'expo-router';
 
 export default function SplashScreen() {
