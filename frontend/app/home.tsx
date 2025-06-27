@@ -9,9 +9,15 @@ export default function Index() {
       <Text style={styles.title}>Welcome to DocSync!</Text>  
       <TouchableHighlight 
         style={styles.button}
-        onPress={() => router.push('/documents')}
+        onPress={() => router.push('/')}
       >
-        <Text style={styles.buttonText}>View My Documents</Text>
+        <Text style={styles.buttonText}>View Doctor Dashboard</Text>
+      </TouchableHighlight>
+      <TouchableHighlight 
+        style={styles.button}
+        onPress={() => router.push('/patient_dashboard')}
+      >
+        <Text style={styles.buttonText}>View Patient Dashboard</Text>
       </TouchableHighlight>
     </View>
   );
@@ -41,6 +47,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     paddingVertical: 15,
     borderRadius: 8,
+    marginTop: 20,
   },
   buttonText: {
     color: 'white',
