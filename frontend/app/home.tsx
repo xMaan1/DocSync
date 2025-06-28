@@ -9,13 +9,13 @@ export default function Index() {
       <Text style={styles.title}>Welcome to DocSync!</Text>  
       <TouchableHighlight 
         style={styles.button}
-        onPress={() => router.push('/')}
+        onPress={() => router.push('/(doctor)/doctor_dashboard' as any)}
       >
         <Text style={styles.buttonText}>View Doctor Dashboard</Text>
       </TouchableHighlight>
       <TouchableHighlight 
         style={styles.button}
-        onPress={() => router.push('/patient_dashboard')}
+        onPress={() => router.push('/(patient)/patient_dashboard' as any)}
       >
         <Text style={styles.buttonText}>View Patient Dashboard</Text>
       </TouchableHighlight>

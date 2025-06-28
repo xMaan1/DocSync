@@ -23,7 +23,7 @@ export default function LoginScreen() {
       </TouchableHighlight>
     <View style={styles.signupContainer}>
         <Text>Don't have an account? </Text>
-    <TouchableWithoutFeedback onPress={() => router.push('/register')}>
+    <TouchableWithoutFeedback onPress={() => router.push('/(auth)/register' as any)}>
       <View>
         <Text style={styles.signupText}>Register Now!</Text>
       </View>

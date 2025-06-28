@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, TouchableWithoutFeedback} from 'react-native';
 import {useRouter} from 'expo-router';
 
 export default function PatientDashboard() {
@@ -9,47 +9,51 @@ export default function PatientDashboard() {
     <View style={styles.section1}>
       <View style={styles.textContainer}>
         <Text style={styles.headerTitle}>Good Morning</Text>
-        <Text style={styles.headerSubtitle}>Dr. Smith</Text>
+        <Text style={styles.headerSubtitle}>Ahmad Farhan</Text>
       </View>
-      <View style={styles.profileIcon}>
-        <Text style={styles.profileText}>👤</Text>
-      </View>
+      <TouchableWithoutFeedback 
+        onPress={() => router.push('/profile' as any)}
+      >
+        <View style={styles.profileIcon}>
+          <Text style={styles.profileText}>👤</Text>
+        </View>
+      </TouchableWithoutFeedback>
     </View>
     
     <ScrollView style={styles.scrollContainer}>
       <View style={styles.cardRow}>
         <View style={styles.card}>
-          <Text style={styles.cardNumber1}>12</Text>
-          <Text style={styles.cardTitle}>Today's Appointments</Text>
+          <Text style={styles.cardNumber1}>3</Text>
+          <Text style={styles.cardTitle}>Upcoming Appointments</Text>
         </View>
         
         <View style={styles.card}>
-          <Text style={styles.cardNumber2}>48</Text>
-          <Text style={styles.cardTitle}>Total Patients</Text>
+          <Text style={styles.cardNumber2}>12</Text>
+          <Text style={styles.cardTitle}>Medical Records</Text>
         </View>
       </View>
       
-      <Text style={styles.section2}>Today's Appointments</Text>
+      <Text style={styles.section2}>My Appointments</Text>
       <View style={styles.cardColumn}>
         <View style={styles.card2}>
-          <Text style={styles.cardNumber1}>Abdulrehman Bilal</Text>
-          <Text style={styles.cardTitle}>Regular Checkup</Text>
+          <Text style={styles.cardNumber1}>Dr. Javaid Iqbal</Text>
+          <Text style={styles.cardTitle}>Regular Checkup - Today 2:00 PM</Text>
         </View>
         <View style={styles.card2}>
-          <Text style={styles.cardNumber2}>Hassan Shahzad</Text>
-          <Text style={styles.cardTitle}>Follow-up</Text>
+          <Text style={styles.cardNumber2}>Dr. Asghar Butt</Text>
+          <Text style={styles.cardTitle}>Follow-up - Tomorrow 10:00 AM</Text>
         </View>
       </View>
       
-      <Text style={styles.section2}>Recent Patients</Text>
+      <Text style={styles.section2}>Recent Reports</Text>
       <View style={styles.cardColumn}>
         <View style={styles.card2}>
-          <Text style={styles.cardNumber1}>Ali Khan</Text>
-          <Text style={styles.cardTitle}>Consultation</Text>
+          <Text style={styles.cardNumber1}>Blood Test</Text>
+          <Text style={styles.cardTitle}>December 20, 2024</Text>
         </View>
         <View style={styles.card2}>
-          <Text style={styles.cardNumber2}>Hadi Bharara</Text>
-          <Text style={styles.cardTitle}>Follow-up</Text>
+          <Text style={styles.cardNumber2}>X-Ray Report</Text>
+          <Text style={styles.cardTitle}>December 18, 2024</Text>
         </View>
       </View>
     </ScrollView>
@@ -65,7 +69,7 @@ const styles = StyleSheet.create({
   section1: {
     height: 135,
     padding: 20,
-    backgroundColor: '#FACC15',
+    backgroundColor: '#10B981',
     flexDirection: 'row',
     paddingTop: 50,
     borderBottomLeftRadius: 20,

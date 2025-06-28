@@ -1,1 +1,1 @@
-Gotta Create Register page and then dashboards
+gotta create patient dashboard and profile page tomorrow
