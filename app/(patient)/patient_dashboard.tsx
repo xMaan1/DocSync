@@ -1,5 +1,6 @@
 import {View, Text, ScrollView} from 'react-native';
 import {useRouter} from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { CommonStyles } from '../../types';
 import { DashboardHeader, DashboardCard } from '../../components';
 
@@ -7,7 +8,7 @@ export default function PatientDashboard() {
   const router = useRouter();
 
  return (
-  <View style={CommonStyles.container}>
+  <SafeAreaView style={CommonStyles.safeContainer}>
     <DashboardHeader
       greeting="Good Morning"
       userName="Ahmad Farhan"
@@ -64,6 +65,6 @@ export default function PatientDashboard() {
         />
       </View>
     </ScrollView>
-  </View>
+  </SafeAreaView>
  );
 }

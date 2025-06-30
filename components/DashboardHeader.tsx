@@ -12,14 +12,9 @@ export default function DashboardHeader({
   userType: 'doctor' | 'patient'; 
   onProfilePress: () => void; 
 }) {
-  const headerStyle = [
-    DashboardStyles.section1,
-    userType === 'doctor' ? DashboardStyles.doctorHeader : DashboardStyles.patientHeader
-  ];
-
   return (
-    <View style={headerStyle}>
-      <View style={CommonStyles.textContainer}>
+    <View style={DashboardStyles.section1}>
+      <View style={DashboardStyles.textContainer}>
         <Text style={DashboardStyles.dashboardHeaderTitle}>{greeting}</Text>
         <Text style={DashboardStyles.dashboardHeaderSubtitle}>{userName}</Text>
       </View>

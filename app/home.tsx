@@ -1,12 +1,14 @@
 import { Text, View, TouchableHighlight } from "react-native";
 import { useRouter } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { CommonStyles } from '../types';
 
 export default function Index() {
   const router = useRouter();
 
   return (
-    <View style={CommonStyles.centerContainer}>
+    <SafeAreaView style={CommonStyles.safeContainer}>
+      <View style={CommonStyles.centerContainer}>
       <Text style={CommonStyles.title}>Welcome to DocSync!</Text>  
       <TouchableHighlight 
         style={CommonStyles.button}
@@ -20,6 +22,7 @@ export default function Index() {
       >
         <Text style={CommonStyles.buttonText}>View Patient Dashboard</Text>
       </TouchableHighlight>
-    </View>
+      </View>
+    </SafeAreaView>
   );
 }

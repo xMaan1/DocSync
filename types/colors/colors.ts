@@ -1,16 +1,18 @@
 export const Colors = {
   primary: '#007AFF',
-  secondary: '#FACC15',
-  success: '#10B981',
-  danger: '#EF4444',
-  background: '#f8f9fa',
-  white: '#ffffff',
-  text: '#333',
-  textSecondary: '#666',
-  textLight: '#999',
-  border: '#e0e0e0',
-  borderLight: '#ccc',
-  green: '#10B981',
-  blue: '#4F46E5',
-  yellow: '#FACC15',
+  success: '#34C759',
+  danger: '#FF3B30',
+  warning: '#FFCC00',
+  
+  background: '#F2F2F7',
+  white: '#FFFFFF',
+  cardBackground: '#FFFFFF',
+  
+  text: '#000000',
+  textSecondary: '#666666',
+  textLight: '#999999',
+  placeholder: '#999999',
+  
+  border: '#E1E1E1',
+  separator: '#E1E1E1',
 };

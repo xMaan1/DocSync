@@ -1,6 +1,7 @@
 import { View, Text, TouchableWithoutFeedback, TouchableHighlight } from "react-native";
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { CommonStyles } from '../../types';
 import { CustomTextInput, CustomDropdown } from '../../components';
 
@@ -14,7 +15,8 @@ export default function RegisterScreen() {
   ];
 
   return (
-    <View style={CommonStyles.centerContainer}>
+    <SafeAreaView style={CommonStyles.safeContainer}>
+      <View style={CommonStyles.centerContainer}>
       <Text style={CommonStyles.title}>Register for DocSync</Text>
       
       <CustomDropdown
@@ -53,6 +55,7 @@ export default function RegisterScreen() {
           <Text style={CommonStyles.linkText}>Login Now!</Text>
         </TouchableWithoutFeedback>
       </View>
-    </View>
+      </View>
+    </SafeAreaView>
   );
 }

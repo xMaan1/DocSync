@@ -1,6 +1,7 @@
 import {View, Text, ScrollView, TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
 import {useRouter} from 'expo-router';
 import { useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { CommonStyles, ProfileStyles } from '../types';
 import { CustomTextInput, CustomDropdown } from '../components';
 
@@ -17,8 +18,8 @@ export default function ProfileScreen() {
   ];
 
   return (
-    <View style={CommonStyles.container}>
-      <View style={[CommonStyles.header, CommonStyles.headerYellow]}>
+    <SafeAreaView style={CommonStyles.safeContainer}>
+      <View style={CommonStyles.header}>
         <Text style={CommonStyles.headerTitle}>Profile</Text>
       </View>
       
@@ -100,6 +101,6 @@ export default function ProfileScreen() {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
