@@ -1,7 +1,7 @@
 import { View, Text, TouchableWithoutFeedback, TouchableHighlight } from "react-native";
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { CommonStyles } from '../../types/styles/styles';
+import { CommonStyles } from '../../types';
 import { CustomTextInput, CustomDropdown } from '../../components';
 
 export default function RegisterScreen() {

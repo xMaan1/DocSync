@@ -1,6 +1,6 @@
 import { View, Text, TouchableWithoutFeedback, TouchableHighlight } from "react-native";
 import { useRouter } from 'expo-router';
-import { CommonStyles } from '../../types/styles/styles';
+import { CommonStyles } from '../../types';
 import { CustomTextInput } from '../../components';
 
 export default function LoginScreen() {

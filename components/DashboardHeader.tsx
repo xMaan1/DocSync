@@ -1,5 +1,5 @@
 import { View, Text, TouchableWithoutFeedback } from 'react-native';
-import { CommonStyles, DashboardStyles } from '../types/styles/styles';
+import { CommonStyles, DashboardStyles } from '../types';
 
 export default function DashboardHeader({ 
   greeting, 

@@ -1,6 +1,6 @@
 import {View, Text, ScrollView} from 'react-native';
 import {useRouter} from 'expo-router';
-import { CommonStyles } from '../../types/styles/styles';
+import { CommonStyles } from '../../types';
 import { DashboardHeader, DashboardCard } from '../../components';
 
 export default function PatientDashboard() {

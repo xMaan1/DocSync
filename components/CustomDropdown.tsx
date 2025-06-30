@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
-import { CommonStyles } from '../types/styles/styles';
+import { CommonStyles } from '../types';
 
 export default function CustomDropdown({
   label,

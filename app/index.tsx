@@ -1,7 +1,7 @@
 import {Text, View, ActivityIndicator} from "react-native";
 import {useEffect} from "react";
 import {useRouter} from 'expo-router';
-import { CommonStyles, Colors } from '../types/styles/styles';
+import { CommonStyles, Colors } from '../types';
 
 export default function SplashScreen() {
     const router = useRouter();

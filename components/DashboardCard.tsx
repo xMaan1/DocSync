@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import { CommonStyles } from '../types/styles/styles';
+import { CommonStyles } from '../types';
 
 export default function DashboardCard({ 
   number, 

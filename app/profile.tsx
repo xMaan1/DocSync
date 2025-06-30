@@ -1,7 +1,7 @@
 import {View, Text, ScrollView, TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
 import {useRouter} from 'expo-router';
 import { useState } from 'react';
-import { CommonStyles, ProfileStyles } from '../types/styles/styles';
+import { CommonStyles, ProfileStyles } from '../types';
 import { CustomTextInput, CustomDropdown } from '../components';
 
 export default function ProfileScreen() {

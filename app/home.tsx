@@ -1,6 +1,6 @@
 import { Text, View, TouchableHighlight } from "react-native";
 import { useRouter } from 'expo-router';
-import { CommonStyles } from '../types/styles/styles';
+import { CommonStyles } from '../types';
 
 export default function Index() {
   const router = useRouter();
