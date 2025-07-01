@@ -1,44 +1,42 @@
-import { View, Text, TouchableWithoutFeedback, TouchableHighlight } from "react-native";
+import { View, Text, TouchableWithoutFeedback, TouchableHighlight, TextInput } from "react-native";
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CommonStyles } from '../../types';
-import { CustomTextInput, CustomDropdown } from '../../components';
 
 export default function RegisterScreen() {
   const router = useRouter();
   const [selectedUserType, setSelectedUserType] = useState<string | null>(null);
-
-  const userTypeData = [
-    { label: 'Patient', value: 'patient' },
-    { label: 'Doctor', value: 'doctor' },
-  ];
 
   return (
     <SafeAreaView style={CommonStyles.safeContainer}>
       <View style={CommonStyles.centerContainer}>
       <Text style={CommonStyles.title}>Register for DocSync</Text>
       
-      <CustomDropdown
-        data={userTypeData}
-        value={selectedUserType}
-        onChange={(item) => {
-          setSelectedUserType(item.value);
-          console.log('Selected user type:', item.value);
+      <TouchableHighlight 
+        style={[CommonStyles.authInput, {justifyContent: 'center', backgroundColor: '#f5f5f5'}]}
+        onPress={() => {
+          if (selectedUserType === 'patient') {
+            setSelectedUserType('doctor');
+          } else {
+            setSelectedUserType('patient');
+          }
         }}
-        placeholder="Select User Type"
-        isAuthDropdown={true}
-      />
+      >
+        <Text style={{color: selectedUserType ? '#000' : '#666'}}>
+          {selectedUserType ? (selectedUserType === 'patient' ? 'Patient' : 'Doctor') : 'Select User Type'}
+        </Text>
+      </TouchableHighlight>
       
-      <CustomTextInput
+      <TextInput 
+        style={CommonStyles.authInput}
         placeholder="Email"
-        isAuthInput={true}
         keyboardType="email-address"
       />
       
-      <CustomTextInput
+      <TextInput 
+        style={CommonStyles.authInput}
         placeholder="Password"
-        isAuthInput={true}
         secureTextEntry
       />
       

@@ -1,8 +1,7 @@
-import { View, Text, TouchableWithoutFeedback, TouchableHighlight } from "react-native";
+import { View, Text, TouchableWithoutFeedback, TouchableHighlight, TextInput } from "react-native";
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CommonStyles } from '../../types';
-import { CustomTextInput } from '../../components';
 
 export default function LoginScreen() {
     const router = useRouter();
@@ -10,14 +9,14 @@ export default function LoginScreen() {
     <SafeAreaView style={CommonStyles.safeContainer}>
       <View style={CommonStyles.centerContainer}>
         <Text style={CommonStyles.title}>Login to DocSync</Text>
-        <CustomTextInput
+        <TextInput 
+          style={CommonStyles.authInput}
           placeholder="Email"
-          isAuthInput={true}
           keyboardType="email-address"
         />
-        <CustomTextInput
+        <TextInput 
+          style={CommonStyles.authInput}
           placeholder="Password"
-          isAuthInput={true}
           secureTextEntry
         />
         <TouchableHighlight 
